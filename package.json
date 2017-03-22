@@ -1,0 +1,29 @@
+{
+  "name": "which-chrome",
+  "description": "get Google Chrome path",
+  "version": "0.1.0",
+  "author": "sasa+1 <sasaplus1@gmail.com>",
+  "bin": "./which-chrome",
+  "dependencies": {
+    "commander": "^2.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "fixpack": "^2.3.1",
+    "karma-chrome-launcher": "^2.0.0"
+  },
+  "license": "MIT",
+  "main": "./index.js",
+  "peerDependencies": {
+    "karma-chrome-launcher": "2.x"
+  },
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sasaplus1/which-chrome.git"
+  },
+  "scripts": {
+    "fixpack": "fixpack",
+    "lint": "eslint ./index.js ./which-chrome"
+  }
+}

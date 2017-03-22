@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var commander = require('commander');
+
+var whichChrome = require('./index');
+
+var meta = require('./package');
+
+Object.keys(whichChrome).forEach(function(name) {
+  var fullPath = whichChrome[name];
+
+  commander
+    .command(name)
+    .description('output path of ' + name)
+    .action(function() {
+      if (fullPath) {
+        process.stdout.write(fullPath + '\n');
+      } else {
+        process.exit(1);
+      }
+    });
+});
+
+commander
+  .version(meta.version, '-v, --version')
+  .parse(process.argv);
+
+if (commander.args.length === 0) {
+  commander.help();
+}
