@@ -7,7 +7,7 @@ get Google Chrome path
 ### npm
 
 ```sh
-$ npm install which-chrome
+$ npm install which-chrome karma-chrome-launcher
 ```
 
 ## Usage
