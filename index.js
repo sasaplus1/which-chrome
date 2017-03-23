@@ -23,15 +23,10 @@ Object.keys(karmaChromeLauncher).forEach(function(key) {
     return;
   }
 
-  try {
-    fullPath = info.DEFAULT_CMD[process.platform];
+  fullPath = info.DEFAULT_CMD[process.platform];
 
-    fs.accessSync(fullPath);
-
-    chromePaths[info.name] = fullPath;
-  } catch(e) {
-    chromePaths[info.name] = null;
-  }
+  // NOTE: fs.existsSync is not deprecated in node.js 6.x or above
+  chromePaths[info.name] = fs.existsSync(fullPath) ? fullPath : null;
 });
 
 module.exports = chromePaths;
