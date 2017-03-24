@@ -1,7 +1,7 @@
 {
   "name": "which-chrome",
   "description": "get Google Chrome path",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "sasa+1 <sasaplus1@gmail.com>",
   "bin": "./which-chrome",
   "dependencies": {
@@ -24,6 +24,7 @@
   },
   "scripts": {
     "fixpack": "fixpack",
-    "lint": "eslint ./index.js ./which-chrome"
+    "lint": "eslint ./index.js ./which-chrome",
+    "travis": "./which-chrome Chrome && ./which-chrome ChromeCanary"
   }
 }

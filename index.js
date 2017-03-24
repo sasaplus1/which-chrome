@@ -1,13 +1,11 @@
 'use strict';
 
-var fs = require('fs');
-
 var karmaChromeLauncher = require('karma-chrome-launcher');
 
 var chromePaths = {};
 
 Object.keys(karmaChromeLauncher).forEach(function(key) {
-  var info, fullPath;
+  var info;
 
   if (key.indexOf('launcher:') !== 0) {
     return;
@@ -23,15 +21,7 @@ Object.keys(karmaChromeLauncher).forEach(function(key) {
     return;
   }
 
-  try {
-    fullPath = info.DEFAULT_CMD[process.platform];
-
-    fs.accessSync(fullPath);
-
-    chromePaths[info.name] = fullPath;
-  } catch(e) {
-    chromePaths[info.name] = null;
-  }
+  chromePaths[info.name] = info.DEFAULT_CMD[process.platform] || null;
 });
 
 module.exports = chromePaths;
