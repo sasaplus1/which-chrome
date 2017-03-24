@@ -24,6 +24,7 @@
   },
   "scripts": {
     "fixpack": "fixpack",
-    "lint": "eslint ./index.js ./which-chrome"
+    "lint": "eslint ./index.js ./which-chrome",
+    "travis": "./which-chrome Chrome && ./which-chrome ChromeCanary"
   }
 }

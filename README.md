@@ -1,5 +1,6 @@
 # which-chrome
 
+[![Build Status](https://travis-ci.org/sasaplus1/which-chrome.svg)](https://travis-ci.org/sasaplus1/which-chrome)
 [![Dependency Status](https://gemnasium.com/badges/github.com/sasaplus1/which-chrome.svg)](https://gemnasium.com/github.com/sasaplus1/which-chrome)
 [![npm version](https://badge.fury.io/js/which-chrome.svg)](https://badge.fury.io/js/which-chrome)
 
