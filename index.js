@@ -1,7 +1,5 @@
 'use strict';
 
-var fs = require('fs');
-
 var karmaChromeLauncher = require('karma-chrome-launcher');
 
 var chromePaths = {};
